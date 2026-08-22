@@ -43,7 +43,7 @@ QuantumultX/
 ### 星链机场｜轻松注册 即领永久免费试用订阅
 
 <p align="center">
-  <a href="assets/chuixue-price-list.jpg">
+  <a href="https://xship.2fa.cat/?7vYiIpE">
     <img src="https://picui.ogmua.cn/s1/2026/08/22/6a89a85547aa5.webp" alt="高速|稳定|安全|省心" width="520" />
   </a>
 </p>
