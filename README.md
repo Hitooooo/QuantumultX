@@ -37,8 +37,37 @@ Quantumult X 公开配置，主配置位于 [`profile/QX_Config.conf`](profile/Q
 **奈雪**｜可注册查看当前套餐与节点
 
 🔗 [点击注册](https://www.naixueyun.net/#/register?code=SDzhfUgs)
+## 🚀 快速开始
 
+### 1. 导入配置
 
+在 Quantumult X 中：
+
+1. 点击「配置」
+2. 选择「下载」或「从文件导入」
+3. 复制以下地址：
+   ```
+   https://raw.githubusercontent.com/curtinp118/QuantumultX/refs/heads/main/profile/QX_Config.conf
+   ```
+   CDN配置链接：
+   ```
+   https://cdn.jsdelivr.net/gh/curtinp118/QuantumultX@main/profile/QX_Config.conf
+   ```
+### 2. 配置订阅
+
+编辑 `[server_remote]` 部分添加你的机场订阅链接。
+
+如需订阅服务，可参考上方「机场推荐」，建议先试用再按需购买。
+
+### 3. MITM 证书
+
+Google 重定向及部分远程重写需要 MITM 证书：
+
+1. 在 Quantumult X 中开启 MITM
+2. 安装并信任证书
+3. 按需配置对应的 hostname
+
+公开配置仅保留证书占位符，请勿上传本地生成的 `passphrase` 与 `p12`。
 
 ## ✨ 主要特性
 - **内置公益订阅**：内置公益多地区节点订阅 长期维护更新
@@ -97,42 +126,7 @@ Quantumult X 公开配置，主配置位于 [`profile/QX_Config.conf`](profile/Q
 | `notability.js` | Notability 解锁 | 需要 MITM |
 | `dandanvip.js` | 蛋蛋不语 VIP | 需要 MITM |
 
-## 🚀 快速开始
 
-### 1. 导入配置
-
-在 Quantumult X 中：
-
-1. 点击「配置」
-2. 选择「下载」或「从文件导入」
-3. 复制以下地址：
-   ```
-   https://raw.githubusercontent.com/curtinp118/QuantumultX/refs/heads/main/profile/QX_Config.conf
-   ```
-
-### 2. 配置订阅
-
-编辑 `[server_remote]` 部分添加你的机场订阅链接。
-
-如需订阅服务，可参考上方「机场推荐」，建议先试用再按需购买。
-
-### 3. MITM 证书
-
-Google 重定向及部分远程重写需要 MITM 证书：
-
-1. 在 Quantumult X 中开启 MITM
-2. 安装并信任证书
-3. 按需配置对应的 hostname
-
-公开配置仅保留证书占位符，请勿上传本地生成的 `passphrase` 与 `p12`。
-
-### 4. 使用手动检测
-
-主配置在 `[task_local]` 中预置了 6 个 `event-interaction` 工具，可从 Quantumult X 的交互任务入口按需运行。当前主配置不包含自动定时签到。
-
-### 5. 按需添加脚本
-
-`scripts/` 目录中的签到和解锁配置不会由主配置自动加载。使用前请单独导入对应 `.conf`，并确认其 Cookie、请求头及 MITM 要求。
 
 ## 🌐 策略说明
 
