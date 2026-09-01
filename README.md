@@ -1,42 +1,17 @@
 # Quantumult X 配置库
 
-Quantumult X 配置文件集合，脚本已迁移至 [Scripthub](https://github.com/curtinp118/Scripthub) 统一管理。
+Quantumult X 公开配置，主配置位于 [`profile/QX_Config.conf`](profile/QX_Config.conf)。
+> 脚本统一在 [curtinp118/Scripthub](https://github.com/curtinp118/Scripthub) 管理，本仓库通过 `.conf` 文件远程引用。
 
 ## 📱 配置预览
 
-| 首页预览 | 策略列表 | 重写规则 |
-| :---: | :---: | :---: |
-| <img src="https://cdn.jsdelivr.net/gh/curtinp118/QuantumultX@main/icons/home1.jpeg" width="280" /> | <img src="https://cdn.jsdelivr.net/gh/curtinp118/QuantumultX@main/icons/home2.jpeg" width="280" /> | <img src="https://cdn.jsdelivr.net/gh/curtinp118/QuantumultX@main/icons/rewrite.jpeg" width="280" /> |
+| 策略列表 | 策略列表 |
+| :---: | :---: |
+| <img src="https://cdn.jsdelivr.net/gh/curtinp118/QuantumultX@main/icons/home1.jpeg" width="360" /> | <img src="https://cdn.jsdelivr.net/gh/curtinp118/QuantumultX@main/icons/home2.jpeg" width="360" /> |
 
-## 📁 仓库结构
 
-```
-QuantumultX/
-├── README.md                          # 本文件
-├── LICENSE                            # MIT 许可证
-├── assets/                            # README 图片资源
-│   └── chuixue-price-list.jpg         # 吹雪云价格图
-├── profile/
-│   └── QX_Config.conf                 # 主配置文件
-├── scripts/                           # 脚本配置（远程引用 Scripthub）
-│   ├── glados.conf                    # GLaDOS / Railgun 签到
-│   ├── v2ex.conf                      # V2EX 每日签到
-│   ├── new-api.conf                   # NewAPI 通用签到
-│   ├── cd-rail.conf                   # 成都地铁签到
-│   ├── cmcc.conf                      # 中国移动签到
-│   ├── nodeseek.conf                  # NodeSeek 论坛签到
-│   ├── buding.conf                    # 布丁锁屏解锁
-│   ├── caiyun.conf                    # 彩云天气解锁
-│   ├── nicegram.conf                  # Nicegram 解锁
-│   ├── dreamface.conf                 # DreamFace 解锁
-│   └── notability.conf                # Notability 解锁
-├── rules/                             # 本地规则文件
-│   ├── AI.list                        # AI 服务规则
-│   └── AppleIntelligence.list         # 苹果智能服务规则
-└── icons/                             # 策略图标
-```
 
-> 脚本统一在 [curtinp118/Scripthub](https://github.com/curtinp118/Scripthub) 管理，本仓库通过 `.conf` 文件远程引用。
+
 
 ## 🚀 机场推荐
 
@@ -53,6 +28,7 @@ QuantumultX/
 ---
 
 ### 其他可选
+> 建议先注册试用，按自己的地区、设备和流量需求选择。
 
 **吹雪云**｜低价大流量
 
@@ -62,29 +38,38 @@ QuantumultX/
 
 🔗 [点击注册](https://www.naixueyun.net/#/register?code=SDzhfUgs)
 
-> 建议先注册试用，按自己的地区、设备和流量需求选择。
+
 
 ## ✨ 主要特性
-
+- **内置公益订阅**：内置公益多地区节点订阅 长期维护更新
 ### 🔧 完整配置
+
 - **智能分流**：国内直连、国外代理、流媒体、社交等智能分类
-- **地区策略**：香港、台湾、日本、新加坡、美国、韩国等节点智能分配
-- **策略优选**：支持手动选择、自动延迟测试、目标地址哈希
-- **DNS 优化**：预配置多个高效 DNS 解析服务，支持 DoH3
-- **IPv6 禁用**：默认禁用 IPv6 避免泄漏
+- **地区策略**：香港、台湾、日本、新加坡、美国、韩国节点自动优选
+- **策略优选**：支持手动选择、延迟测试、美国节点目标地址哈希
+- **DNS**：使用阿里 DNS 与腾讯 DNS 的 DoH 服务，支持优先尝试 DoH3
+- **IPv6 控制**：默认禁用 AAAA 解析，降低双栈环境下的分流偏差
+- **网络兼容**：预设 DNS 排除域名、UDP 白名单及私有地址绕行规则
 
 ### 📋 规则集成
-- **国内规则**：国内 CDN、金融、社交直连
-- **国际规则**：Google、Apple、PayPal
-- **流媒体**：Netflix、YouTube、Spotify
-- **AI 服务**：OpenAI、Claude、Gemini、Copilot、Perplexity 等全覆盖
-- **广告拦截**：多个高质量广告过滤规则
+
+- **国内直连**：Apple、微信、国内媒体、ChinaMax 与常用金融服务
+- **国际服务**：Google、Microsoft、PayPal、Telegram、X 等独立策略
+- **流媒体与游戏**：Netflix、YouTube、Spotify、Steam、Epic、Sony、Nintendo
+- **广告拦截**：AWAvenue 与 Advertising 规则统一交由 `Ads` 策略处理
 
 ### 🔄 重写规则
-- YouTube 字幕/去广告
-- 闲鱼、小红书、高德地图去广告
-- Reddit 功能增强
+
+- BoxJS
+- YouTube 字幕
+- YouTube 去广告
 - Spotify 增强
+
+### 🧰 手动检测
+
+- 流媒体解锁查询
+- GeoIP 与网络信息查询
+- 节点纯净度、IP 质量及阻断检测
 
 ## 📜 脚本列表
 
@@ -110,12 +95,14 @@ QuantumultX/
 | `nicegram.js` | Nicegram 解锁 | 需要 MITM |
 | `dreamface.js` | DreamFace 解锁 | 需要 MITM |
 | `notability.js` | Notability 解锁 | 需要 MITM |
+| `dandanvip.js` | 蛋蛋不语 VIP | 需要 MITM |
 
 ## 🚀 快速开始
 
 ### 1. 导入配置
 
 在 Quantumult X 中：
+
 1. 点击「配置」
 2. 选择「下载」或「从文件导入」
 3. 复制以下地址：
@@ -131,48 +118,59 @@ QuantumultX/
 
 ### 3. MITM 证书
 
-部分脚本需要 MITM 证书才能工作：
+Google 重定向及部分远程重写需要 MITM 证书：
+
 1. 在 Quantumult X 中开启 MITM
 2. 安装并信任证书
-3. 配置对应的 hostname
+3. 按需配置对应的 hostname
 
-### 4. 启用脚本
+公开配置仅保留证书占位符，请勿上传本地生成的 `passphrase` 与 `p12`。
 
-编辑 `[task_local]` 部分启用需要的自动签到脚本（默认 disabled）。
+### 4. 使用手动检测
+
+主配置在 `[task_local]` 中预置了 6 个 `event-interaction` 工具，可从 Quantumult X 的交互任务入口按需运行。当前主配置不包含自动定时签到。
+
+### 5. 按需添加脚本
+
+`scripts/` 目录中的签到和解锁配置不会由主配置自动加载。使用前请单独导入对应 `.conf`，并确认其 Cookie、请求头及 MITM 要求。
 
 ## 🌐 策略说明
 
 | 策略 | 用途 | 节点选择 |
 |------|------|----------|
-| Apple | Apple 服务 | 直连/代理 |
-| AI | AI 服务 (ChatGPT/Claude/Gemini) | 美国/日本/新加坡 |
-| Google | Google 服务 | 新加坡/美国 |
-| YouTube | YouTube | 香港/台湾/日本/韩国/新加坡/美国 |
-| X | Twitter/X | 香港/台湾/日本/韩国/新加坡/美国 |
-| Telegram | Telegram | 香港/台湾/日本/新加坡/美国 |
-| Netflix | Netflix | 手动选择/香港/台湾/日本/韩国/新加坡/美国 |
-| Spotify | Spotify | 新加坡/香港/日本/美国 |
-| PayPal | PayPal | 美国/代理/直连 |
-| GlobalMedia | 全球流媒体 | 代理/直连/手动 |
-| Gamer | 游戏平台 | 代理/直连/香港/美国/新加坡 |
+| `Global` | 国际流量兜底 | `proxy`、六个地区优选、`Other`、`direct` |
+| `AI` | AI 与 Apple Intelligence | 美国目标哈希、美国/新加坡/日本/香港、`Global`、`Other` |
+| `Google` | Google 服务 | 新加坡/美国/日本/香港、`AI`、`Global` |
+| `Microsoft` | Microsoft 服务 | 美国/新加坡/香港/日本/台湾/韩国、`Global` |
+| `YouTube` | YouTube | 香港/台湾/日本/新加坡/美国/韩国、`Global` |
+| `X` | Twitter/X | `Global`、美国/新加坡/日本/香港/台湾/韩国 |
+| `Telegram` | Telegram | 新加坡/香港/美国/日本/台湾、`Global` |
+| `PayPal` | PayPal | 美国、`Global`、直连及其他地区优选 |
+| `Netflix` | Netflix | 新加坡/日本/香港/台湾/美国/韩国、`Global` |
+| `Spotify` | Spotify | 新加坡/美国/香港/日本、`Global` |
+| `Media` | 全球流媒体 | 六个地区优选、`Global`、直连 |
+| `Game` | 游戏平台 | 香港/新加坡/日本/美国、`Global`、直连 |
+| `HK/TW/JP/SG/US/KR Fast` | 地区节点自动优选 | 按节点名称正则匹配并定期测速 |
+| `US Dest-hash` | 美国节点会话保持 | 按目标地址稳定选择美国节点 |
+| `Other` | 其他可用节点 | 排除地区、套餐、流量与客服类节点名称 |
+| `Ads` | 广告规则 | 拒绝或直连 |
 
 ## 🔐 隐私与安全
 
 本仓库中的 `QX_Config.conf` 为公开配置：
 - ✅ 所有规则和脚本链接都是公开的
-- ✅ MITM 证书信息已使用占位符替换
-- ✅ 个人订阅 Token 需自行添加
-- ✅ Cookie 等敏感信息仅保存在本地
+- ✅ 节点地址、订阅 URL 和 MITM 证书均使用注释占位符
+- ✅ 个人订阅 Token、节点密码、Cookie 与请求头仅保存在本地
+- ✅ 主配置不绑定设备 ID，也不包含自动签到任务
 
-## 🤝 相关资源
+## 🤝 特别鸣谢
 
-- [Scripthub 脚本库](https://github.com/curtinp118/Scripthub) — 统一脚本管理
-- [Loon 配置库](https://github.com/curtinp118/Loon) — Loon 配置
-- [Quantumult X 官方网站](https://quantumultx.com)
+
 - [iOS 规则脚本库 - blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)
 - [资源解析与脚本 - KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [广告规则 - AWAvenue](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)
-- [重写规则 - ddgksf2013](https://github.com/ddgksf2013/Rewrite)
+- [YouTube 重写 - ZenmoFeiShi/Qx](https://github.com/ZenmoFeiShi/Qx)
+- [Spotify 重写 - app2smile/rules](https://github.com/app2smile/rules)
 
 欢迎提交 Issue 和 Pull Request！
 
@@ -186,4 +184,4 @@ QuantumultX/
 
 ---
 
-**最后更新**: 2026-07-14
+**最后更新**: 2026-09-01
