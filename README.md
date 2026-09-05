@@ -140,10 +140,10 @@ Google 重定向及部分远程重写需要 MITM 证书：
 | `YouTube` | YouTube | 香港/台湾/日本/新加坡/美国/韩国、`Global` |
 | `X` | Twitter/X | `Global`、美国/新加坡/日本/香港/台湾/韩国 |
 | `Telegram` | Telegram | 新加坡/香港/美国/日本/台湾、`Global` |
-| `PayPal` | PayPal | 美国、`Global`、直连及其他地区优选 |
-| `Netflix` | Netflix | 新加坡/日本/香港/台湾/美国/韩国、`Global` |
+| `PayPal` | PayPal | 美国/英国、`Global`、直连及其他地区优选 |
+| `Netflix` | Netflix | 新加坡/日本/香港/台湾/美国/英国/韩国、`Global` |
 | `Spotify` | Spotify | 新加坡/美国/香港/日本、`Global` |
-| `Media` | 全球流媒体 | 六个地区优选、`Global`、直连 |
+| `Media` | 全球流媒体 | 七个地区优选、`Global`、直连 |
 | `Game` | 游戏平台 | 香港/新加坡/日本/美国、`Global`、直连 |
 | `Crypto` | 币安、OKX 及其他数字货币服务 | 美国/新加坡/英国/香港/日本、`Global`、`Other` |
 | `HK/TW/JP/SG/US/KR/UK Fast` | 地区节点自动优选 | 按节点名称正则匹配并定期测速 |
