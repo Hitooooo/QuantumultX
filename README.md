@@ -74,7 +74,7 @@ Google 重定向及部分远程重写需要 MITM 证书：
 ### 🔧 完整配置
 
 - **智能分流**：国内直连、国外代理、流媒体、社交等智能分类
-- **地区策略**：香港、台湾、日本、新加坡、美国、韩国节点自动优选
+- **地区策略**：香港、台湾、日本、新加坡、美国、韩国、英国节点自动优选
 - **策略优选**：支持手动选择、延迟测试、美国节点目标地址哈希
 - **DNS**：使用阿里 DNS 与腾讯 DNS 的 DoH 服务，支持优先尝试 DoH3
 - **IPv6 控制**：默认禁用 AAAA 解析，降低双栈环境下的分流偏差
@@ -83,7 +83,7 @@ Google 重定向及部分远程重写需要 MITM 证书：
 ### 📋 规则集成
 
 - **国内直连**：Apple、微信、国内媒体、ChinaMax 与常用金融服务
-- **国际服务**：Google、Microsoft、PayPal、Telegram、X 等独立策略
+- **国际服务**：Google、Microsoft、PayPal、Telegram、X、数字货币服务等独立策略
 - **流媒体与游戏**：Netflix、YouTube、Spotify、Steam、Epic、Sony、Nintendo
 - **广告拦截**：AWAvenue 与 Advertising 规则统一交由 `Ads` 策略处理
 
@@ -132,7 +132,8 @@ Google 重定向及部分远程重写需要 MITM 证书：
 
 | 策略 | 用途 | 节点选择 |
 |------|------|----------|
-| `Global` | 国际流量兜底 | `proxy`、六个地区优选、`Other`、`direct` |
+| `Global` | 国际流量兜底 | `proxy`、七个地区优选、`Other`、`direct` |
+| `Apple` | 港区 App Store 与 Apple 商店接口 | 香港优选、直连、Global |
 | `AI` | AI 与 Apple Intelligence | 美国目标哈希、美国/新加坡/日本/香港、`Global`、`Other` |
 | `Google` | Google 服务 | 新加坡/美国/日本/香港、`AI`、`Global` |
 | `Microsoft` | Microsoft 服务 | 美国/新加坡/香港/日本/台湾/韩国、`Global` |
@@ -144,7 +145,8 @@ Google 重定向及部分远程重写需要 MITM 证书：
 | `Spotify` | Spotify | 新加坡/美国/香港/日本、`Global` |
 | `Media` | 全球流媒体 | 六个地区优选、`Global`、直连 |
 | `Game` | 游戏平台 | 香港/新加坡/日本/美国、`Global`、直连 |
-| `HK/TW/JP/SG/US/KR Fast` | 地区节点自动优选 | 按节点名称正则匹配并定期测速 |
+| `Crypto` | 币安、OKX 及其他数字货币服务 | 美国/新加坡/英国/香港/日本、`Global`、`Other` |
+| `HK/TW/JP/SG/US/KR/UK Fast` | 地区节点自动优选 | 按节点名称正则匹配并定期测速 |
 | `US Dest-hash` | 美国节点会话保持 | 按目标地址稳定选择美国节点 |
 | `Other` | 其他可用节点 | 排除地区、套餐、流量与客服类节点名称 |
 | `Ads` | 广告规则 | 拒绝或直连 |
@@ -178,4 +180,4 @@ Google 重定向及部分远程重写需要 MITM 证书：
 
 ---
 
-**最后更新**: 2026-09-01
+**最后更新**: 2026-09-05
